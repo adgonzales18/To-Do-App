@@ -13,6 +13,9 @@ function App() {
   }
   
   function addItem() {
+    if (inputText.trim() === ""){
+      return;
+    }
     setItems((prevItems => [...prevItems, {text: inputText, isChecked : false}]),
     setInputText("")
     )
